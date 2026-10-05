@@ -30,7 +30,7 @@ int main() {
 
         switch (choice) {
         case '1':
-            std::cout << "Choose operation\n";
+            std::cout << "Choose \n";
             std::cout << ">+\n";
             std::cout << ">-\n";
             std::cout << ">*\n";
@@ -70,12 +70,6 @@ int main() {
                 std::cout << "> " << "wrong operation";
                 isOkay = false;
             }
-        case '2':
-            std::cout << "Enter first example: ";
-            std::cout << "Enter second example: ";
-        case '3':
-            std::cout << "Example first";
-            std::cout << "Example second";
         }
     }
 
