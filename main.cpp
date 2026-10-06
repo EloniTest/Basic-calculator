@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <numeric>
+#include <limits>
 #include "mathOperations.hpp"
 
 
@@ -22,69 +24,47 @@ int main() {
     char choice;
     char oper;
 
+    std::string expression;
+
     MathCalculations math;
-
-    std::string virazhenie = "10 + 2 * 3 - 8 / 2";
-
-    try {
-        std::cout << virazhenie << " = " << math.result(virazhenie) << '\n';
-    }
-    catch(std::exception& err) {
-        std::cout << "Error: " << err.what() << '\n';
-    }
 
 
     std::cout << "Basic calculator\n\n";
 
 
-    // while (isOkay) {
-    //     menu();
-    //     std::cin >> choice;
+    while (isOkay) {
+        menu();
+        std::cin >> choice;
 
-    //     switch (choice) {
-    //     case '1':
-    //         std::cout << "Choose \n";
-    //         std::cout << ">+\n";
-    //         std::cout << ">-\n";
-    //         std::cout << ">*\n";
-    //         std::cout << ">/\n";
-    //         std::cout << "> Enter a operation: ";
-    //         std::cin >> oper;
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-    //         if (oper == '+') {
-    //             std::cout << "> " << "Enter first number: ";
-    //             std::cin >> num1;
-    //             std::cout << "> " << "Enter second number: ";
-    //             std::cin >> num2;
-    //             std::cout << "> " << "Result: " << math::add(num1, num2) << '\n';
-    //         }
-    //         else if (oper == '-') {
-    //             std::cout << "> " << "Enter first number: ";
-    //             std::cin >> num1;
-    //             std::cout << "> " << "Enter second number: ";
-    //             std::cin >> num2;
-    //             std::cout << "> " << "Result: " << math::subtract(num1, num2) << '\n';
-    //         }
-    //         else if (oper == '*') {
-    //             std::cout << "> " << "Enter first number: ";
-    //             std::cin >> num1;
-    //             std::cout << "> " << "Enter second number: ";
-    //             std::cin >> num2;
-    //             std::cout << "> " << "Result: " << math::multiply(num1, num2) << '\n';
-    //         }
-    //         else if (oper == '/') {
-    //             std::cout << "> " << "Enter first number: ";
-    //             std::cin >> num1;
-    //             std::cout << "> " << "Enter second number: ";
-    //             std::cin >> num2;
-    //             std::cout << "> " << "Result: " << math::divide(num1, num2) << '\n';
-    //         }
-    //         else {
-    //             std::cout << "> " << "wrong operation";
-    //             isOkay = false;
-    //         }
-    //     }
-    // }
+        switch (choice) {
+        case '1':
+
+            std::cout << "> Enter a expression: ";
+            std::getline(std::cin, expression);
+
+            try {
+                std::cout << expression << " = " << math.result(expression) << '\n';
+            }
+            catch(std::exception& err) {
+                std::cout << "Error: " << err.what() << '\n';
+            }
+            break;
+        case '2':
+            std::cout << "Area calculations\n";
+            break;
+        case '3':
+            std::cout << "Mass transfer\n";
+            break;
+        case '4':
+            std::cout << "leaving calculator" << '\n';
+            isOkay = false;
+            break;
+        }
+    }
+
+    math.~MathCalculations();
 
     return 0;
 }

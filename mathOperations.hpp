@@ -2,7 +2,9 @@
 
 class MathCalculations {
     public:
+        MathCalculations();
         double result(const std::string& virazhenie);
+        ~MathCalculations();
 };
 
 
