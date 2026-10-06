@@ -2,8 +2,8 @@
 
 class MathCalculations {
     public:
-        double result(const std::string& virazhenie) {}
-}
+        double result(const std::string& virazhenie);
+};
 
 
 // namespace math {

@@ -1,6 +1,7 @@
 #include <string>
 #include <vector>
 #include <sstream>
+#include "mathOperations.hpp"
 
 class MathCalculations {
     public:
