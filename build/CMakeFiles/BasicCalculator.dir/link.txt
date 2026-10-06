@@ -1,3 +1,0 @@
-C:\msys64\mingw64\bin\cmake.exe -E rm -f CMakeFiles\BasicCalculator.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\BasicCalculator.dir/objects.a @CMakeFiles\BasicCalculator.dir\objects1.rsp
-C:\msys64\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\BasicCalculator.dir/objects.a -Wl,--no-whole-archive -o BasicCalculator.exe -Wl,--out-implib,libBasicCalculator.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\BasicCalculator.dir\linkLibs.rsp

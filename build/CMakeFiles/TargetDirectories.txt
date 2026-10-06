@@ -1,3 +1,0 @@
-A:/Basic calculator/build/CMakeFiles/BasicCalculator.dir
-A:/Basic calculator/build/CMakeFiles/edit_cache.dir
-A:/Basic calculator/build/CMakeFiles/rebuild_cache.dir
