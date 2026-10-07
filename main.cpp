@@ -34,8 +34,10 @@ int main() {
 
     while (isOkay) {
         menu();
+        // ввод до первого пробела
         std::cin >> choice;
 
+        // игнор того, что ввели в choice
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
         switch (choice) {

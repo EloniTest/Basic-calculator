@@ -3,7 +3,7 @@
 class MathCalculations {
     public:
         MathCalculations();
-        double result(const std::string& virazhenie);
+        double result(std::string& virazhenie);
         ~MathCalculations();
 };
 
