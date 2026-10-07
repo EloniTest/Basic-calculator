@@ -8,9 +8,7 @@
 void menu() {
     std::cout << "----Menu----\n";
     std::cout << ">1. Math operations\n";
-    std::cout << ">2. Area calculations\n";
-    std::cout << ">3. Mass transfer\n";
-    std::cout << ">4. Exit\n";
+    std::cout << ">2. Exit\n";
     std::cout << "Your choice: ";
 }
 
@@ -52,12 +50,6 @@ int main() {
             catch(std::exception& err) {
                 std::cout << "Error: " << err.what() << '\n';
             }
-            break;
-        case '2':
-            std::cout << "Area calculations\n";
-            break;
-        case '3':
-            std::cout << "Mass transfer\n";
             break;
         case '4':
             std::cout << "leaving calculator" << '\n';
