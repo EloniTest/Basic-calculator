@@ -9,8 +9,8 @@
 
 ## Установка
 
-git clone https://github.com/EloniTest/Basic-calculator
-cd repository
+- git clone https://github.com/EloniTest/Basic-calculator
+- cd repository
 
 ## License
 
