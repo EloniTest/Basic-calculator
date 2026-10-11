@@ -51,7 +51,7 @@ int main() {
                 std::cout << "Error: " << err.what() << '\n';
             }
             break;
-        case '4':
+        case '2':
             std::cout << "leaving calculator" << '\n';
             isOkay = false;
             break;
